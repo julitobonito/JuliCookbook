@@ -1,6 +1,7 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import MascotLanding from '../components/MascotLanding.astro';
+import mascotLanding from '../assets/mascot/mascot-landing.png';
 
 const base = import.meta.env.BASE_URL;
 ---
@@ -8,7 +9,7 @@ const base = import.meta.env.BASE_URL;
 <BaseLayout title="Home" description="A personal, living cookbook by Julius.">
   <div class="landing">
     <div class="landing-mascot">
-      <MascotLanding />
+      <Image src={mascotLanding} alt="Juli" width={520} />
     </div>
     <div>
       <h1>Juli's Cookbook</h1>

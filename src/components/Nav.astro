@@ -1,5 +1,6 @@
 ---
-import MascotLogo from './MascotLogo.astro';
+import { Image } from 'astro:assets';
+import mascotLogo from '../assets/mascot/mascot-logo.png';
 
 const base = import.meta.env.BASE_URL;
 const path = Astro.url.pathname;
@@ -14,7 +15,7 @@ function isActive(href: string) {
 
 <header class="site-header">
   <a href={base} class="logo-link">
-    <MascotLogo />
+    <Image src={mascotLogo} alt="Juli" width={88} />
     Juli's Cookbook
   </a>
   <nav>

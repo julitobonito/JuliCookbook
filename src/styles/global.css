@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap');
 
 :root {
-  --bg:        #E8F0F8;
-  --bg-card:   #F4F9FF;
+  --bg:        #F5EFE6;
+  --bg-card:   #FAF7F2;
   --text:      #2C2820;
   --text-mid:  #6B5E52;
   --text-soft: #A0917F;
-  --border:    #C8D8EA;
+  --border:    #DDD5C8;
+  --dot:       #BFC6CF;
   --accent:    #C07850;
   --olive:     #7D9464;
   --slate:     #6A849A;
@@ -27,7 +28,9 @@
 html { font-size: 16px; scroll-behavior: smooth; }
 
 body {
-  background: var(--bg);
+  background-color: var(--bg);
+  background-image: radial-gradient(circle, var(--dot) 1.2px, transparent 1.2px);
+  background-size: 22px 22px;
   color: var(--text);
   font-family: 'DM Sans', system-ui, sans-serif;
   line-height: 1.6;
@@ -52,7 +55,7 @@ img { display: block; max-width: 100%; }
   justify-content: space-between;
   padding: 1.25rem 2rem;
   border-bottom: 1px solid var(--border);
-  background: var(--bg);
+  background-color: var(--bg);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -68,7 +71,7 @@ img { display: block; max-width: 100%; }
   letter-spacing: -0.01em;
 }
 
-.logo-link svg { width: 44px; height: auto; }
+.logo-link img { width: 44px; height: auto; }
 
 nav { display: flex; gap: 1.75rem; }
 
@@ -106,6 +109,7 @@ footer {
 }
 
 .landing-mascot { width: min(260px, 55vw); }
+.landing-mascot img { width: 100%; height: auto; display: block; }
 
 .landing h1 {
   font-size: clamp(2.2rem, 6vw, 3.5rem);
@@ -388,7 +392,7 @@ footer {
   border-top: 1px solid var(--border);
 }
 
-.signoff svg { width: 100px; }
+.signoff img { width: 100px; height: auto; }
 
 .signoff-text {
   font-family: 'Lora', serif;

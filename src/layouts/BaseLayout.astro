@@ -1,6 +1,5 @@
 ---
 import Nav from '../components/Nav.astro';
-import BackgroundPattern from '../components/BackgroundPattern.astro';
 import '../styles/global.css';
 
 interface Props {
@@ -24,7 +23,6 @@ const base = import.meta.env.BASE_URL;
     <title>{title} — Juli's Cookbook</title>
   </head>
   <body>
-    <BackgroundPattern />
     <Nav />
     <main>
       <slot />
