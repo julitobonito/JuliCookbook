@@ -13,7 +13,7 @@ const allCuisines = [...new Set(recipes.map(r => r.data.cuisine))].sort();
 const allTimes    = [...new Set(recipes.map(r => r.data.time))].sort();
 ---
 
-<BaseLayout title="Recipes" description="Browse all recipes in JuliCookbook.">
+<BaseLayout title="Recipes" description="Browse all recipes in Juli's Cookbook.">
   <div class="gallery-header">
     <h1>All recipes</h1>
     <p>{recipes.length} recipe{recipes.length !== 1 ? 's' : ''} and counting</p>

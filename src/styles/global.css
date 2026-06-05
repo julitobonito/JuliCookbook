@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap');
 
 :root {
-  --bg:        #F4EFE6;
-  --bg-card:   #FDFAF5;
+  --bg:        #E8F0F8;
+  --bg-card:   #F4F9FF;
   --text:      #2C2820;
   --text-mid:  #6B5E52;
   --text-soft: #A0917F;
-  --border:    #DDD0BC;
+  --border:    #C8D8EA;
   --accent:    #C07850;
   --olive:     #7D9464;
   --slate:     #6A849A;
