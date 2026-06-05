@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title="About" description="What JuliCookbook is and how to use it.">
+  <div class="text-page">
+    <h1>About this cookbook</h1>
+
+    <p>
+      JuliCookbook is a personal recipe collection — a small, handmade website where I keep the dishes
+      I actually cook and share them with the people I care about.
+    </p>
+
+    <h2>How to use it</h2>
+    <ul>
+      <li>Browse all recipes on the <a href={`${base}recipes`}>Recipes</a> page.</li>
+      <li>Use the filter buttons to narrow by diet, meal type, cuisine, or time.</li>
+      <li>Click any recipe card to open the full recipe — ingredients, method, and all.</li>
+    </ul>
+
+    <h2>What's here</h2>
+    <p>
+      Recipes I've cooked enough times that I trust them. Each one has a short description that explains
+      what the dish is actually like — not the marketing version, but the real one. Sourced from cookbooks,
+      websites, and TikToks, always credited.
+    </p>
+
+    <h2>What's not here (yet)</h2>
+    <p>
+      User accounts, comments, ratings, meal planning, shopping lists — none of that. This is a view-only
+      cookbook. Simple is the point.
+    </p>
+
+    <h2>How it's built</h2>
+    <p>
+      Static site built with <a href="https://astro.build" target="_blank" rel="noopener noreferrer">Astro</a>,
+      hosted on GitHub Pages. New recipes go live within a minute or two of me pushing a commit.
+      No server, no database — just files.
+    </p>
+  </div>
+</BaseLayout>

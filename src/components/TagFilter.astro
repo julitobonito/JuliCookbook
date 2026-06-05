@@ -1,0 +1,93 @@
+---
+interface Props {
+  diets: string[];
+  mealTypes: string[];
+  cuisines: string[];
+  times: string[];
+}
+const { diets, mealTypes, cuisines, times } = Astro.props;
+---
+
+<div class="filters" id="tag-filters">
+  <div class="filter-group">
+    <span class="filter-label">Diet</span>
+    {diets.map(d => (
+      <button class="filter-btn" data-group="diet" data-value={d}>{d}</button>
+    ))}
+  </div>
+
+  <div class="filter-divider"></div>
+
+  <div class="filter-group">
+    <span class="filter-label">Meal</span>
+    {mealTypes.map(m => (
+      <button class="filter-btn" data-group="mealType" data-value={m}>{m}</button>
+    ))}
+  </div>
+
+  <div class="filter-divider"></div>
+
+  <div class="filter-group">
+    <span class="filter-label">Cuisine</span>
+    {cuisines.map(c => (
+      <button class="filter-btn" data-group="cuisine" data-value={c}>{c}</button>
+    ))}
+  </div>
+
+  <div class="filter-divider"></div>
+
+  <div class="filter-group">
+    <span class="filter-label">Time</span>
+    {times.map(t => (
+      <button class="filter-btn" data-group="time" data-value={t}>{t}</button>
+    ))}
+  </div>
+</div>
+
+<script>
+  const activeFilters: Record<string, string | null> = {
+    diet: null, mealType: null, cuisine: null, time: null,
+  };
+
+  function applyFilters() {
+    const cards = document.querySelectorAll<HTMLElement>('[data-recipe-card]');
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+      let show = true;
+
+      if (activeFilters.diet) {
+        const cardDiets = (card.dataset.diet ?? '').split(' ');
+        if (!cardDiets.includes(activeFilters.diet)) show = false;
+      }
+      if (activeFilters.mealType && card.dataset.mealType !== activeFilters.mealType) show = false;
+      if (activeFilters.cuisine && card.dataset.cuisine !== activeFilters.cuisine) show = false;
+      if (activeFilters.time && card.dataset.time !== activeFilters.time) show = false;
+
+      card.style.display = show ? '' : 'none';
+      if (show) visibleCount++;
+    });
+
+    const empty = document.getElementById('empty-state');
+    if (empty) empty.style.display = visibleCount === 0 ? '' : 'none';
+  }
+
+  document.querySelectorAll<HTMLButtonElement>('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const group = btn.dataset.group!;
+      const value = btn.dataset.value!;
+
+      if (activeFilters[group] === value) {
+        activeFilters[group] = null;
+        btn.classList.remove('active');
+      } else {
+        document.querySelectorAll(`.filter-btn[data-group="${group}"]`)
+          .forEach(b => b.classList.remove('active'));
+        activeFilters[group] = value;
+        btn.classList.add('active');
+      }
+
+      applyFilters();
+    });
+  });
+</script>

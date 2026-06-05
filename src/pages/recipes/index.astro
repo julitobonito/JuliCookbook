@@ -1,0 +1,35 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RecipeCard from '../../components/RecipeCard.astro';
+import TagFilter from '../../components/TagFilter.astro';
+
+const recipes = await getCollection('recipes');
+
+// Collect unique filter values from actual recipes
+const allDiets    = [...new Set(recipes.flatMap(r => r.data.diet))].sort();
+const allMeals    = [...new Set(recipes.map(r => r.data.mealType))].sort();
+const allCuisines = [...new Set(recipes.map(r => r.data.cuisine))].sort();
+const allTimes    = [...new Set(recipes.map(r => r.data.time))].sort();
+---
+
+<BaseLayout title="Recipes" description="Browse all recipes in JuliCookbook.">
+  <div class="gallery-header">
+    <h1>All recipes</h1>
+    <p>{recipes.length} recipe{recipes.length !== 1 ? 's' : ''} and counting</p>
+  </div>
+
+  <TagFilter
+    diets={allDiets}
+    mealTypes={allMeals}
+    cuisines={allCuisines}
+    times={allTimes}
+  />
+
+  <div class="recipe-grid">
+    {recipes.map(recipe => <RecipeCard recipe={recipe} />)}
+    <p id="empty-state" class="empty-state" style="display:none">
+      No recipes match those filters — try removing one.
+    </p>
+  </div>
+</BaseLayout>

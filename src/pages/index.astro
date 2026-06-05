@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import MascotLanding from '../components/MascotLanding.astro';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title="Home" description="A personal, living cookbook by Julius.">
+  <div class="landing">
+    <div class="landing-mascot">
+      <MascotLanding />
+    </div>
+    <div>
+      <h1>JuliCookbook</h1>
+      <p class="landing-sub">The recipes I actually cook — for the people I'd otherwise only get to cook for.</p>
+    </div>
+    <a href={`${base}recipes`} class="btn">Browse recipes</a>
+  </div>
+</BaseLayout>

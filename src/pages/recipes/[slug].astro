@@ -1,0 +1,61 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import MascotSignoff from '../../components/MascotSignoff.astro';
+
+export async function getStaticPaths() {
+  const recipes = await getCollection('recipes');
+  return recipes.map(recipe => ({
+    params: { slug: recipe.slug },
+    props: { recipe },
+  }));
+}
+
+const { recipe } = Astro.props;
+const { title, description, image, diet, mealType, cuisine, time, servings, source } = recipe.data;
+const { Content } = await recipe.render();
+---
+
+<BaseLayout title={title} description={description}>
+  <article class="recipe-page">
+
+    {image
+      ? <img class="recipe-hero" src={image} alt={title} />
+      : <div class="recipe-hero-placeholder">🍽️</div>
+    }
+
+    <div class="recipe-eyebrow">
+      <span>{cuisine}</span>
+      <span>·</span>
+      <span>{time}</span>
+      <span>·</span>
+      <span>Serves {servings}</span>
+    </div>
+
+    <h1 class="recipe-title">{title}</h1>
+    <p class="recipe-description">{description}</p>
+
+    <div class="recipe-badges">
+      {diet.map(d => <span class={`tag tag-${d}`}>{d}</span>)}
+      <span class={`tag tag-${mealType}`}>{mealType}</span>
+    </div>
+
+    <hr class="recipe-divider" />
+
+    <div class="recipe-content">
+      <Content />
+    </div>
+
+    {source && (
+      <p class="source-credit">
+        Recipe adapted from <a href={source} target="_blank" rel="noopener noreferrer">{source}</a>
+      </p>
+    )}
+
+    <div class="signoff">
+      <MascotSignoff />
+      <p class="signoff-text">Enjoy. Tell me how it went.</p>
+    </div>
+
+  </article>
+</BaseLayout>
