@@ -3,7 +3,7 @@ title: Mapo Tofu
 description: The one that started it all. Mapo tofu is loud, oily, and absolutely not for the timid — silken tofu trembling in a pool of chilli-blackbean sauce, numbing you gently with every bite. I make this at least once a month.
 diet: [meat]
 mealType: lunch-dinner
-cuisine: Sichuan
+cuisine: Chinese
 time: 30 min
 servings: 4
 source: https://www.seriouseats.com/real-deal-mapo-tofu-recipe
