@@ -5,7 +5,7 @@ image: ../../assets/recipes/dal-makhani.jpg
 diet: [vegetarian]
 mealType: lunch-dinner
 cuisine: Indian
-time: 2 hr
+time: 120 min
 servings: 4 to 5
 source: https://www.indianhealthyrecipes.com/dal-makhani-recipe/
 ---
