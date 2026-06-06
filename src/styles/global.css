@@ -139,9 +139,11 @@ footer {
   background: var(--text);
   color: var(--bg);
   border-radius: var(--radius);
-  font-size: 0.9rem;
-  font-weight: 500;
-  letter-spacing: 0.03em;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   transition: opacity 0.15s;
 }
 
