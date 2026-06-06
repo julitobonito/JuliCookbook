@@ -4,7 +4,7 @@ description: Punjabi slow-cooked black lentils and kidney beans, simmered low an
 image: ../../assets/recipes/dal-makhani.jpg
 diet: [vegetarian]
 mealType: lunch-dinner
-cuisine: Punjabi
+cuisine: Indian
 time: 2 hr
 servings: 4 to 5
 source: https://www.indianhealthyrecipes.com/dal-makhani-recipe/

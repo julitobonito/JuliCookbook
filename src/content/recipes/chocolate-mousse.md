@@ -3,7 +3,7 @@ title: Chocolate Mousse
 description: The most dignified thing you can make with four ingredients. This is old-school French — no cream, just eggs, dark chocolate, butter, and some patience with the whipping. It's remarkably light for something so rich.
 diet: [vegetarian]
 mealType: dessert
-cuisine: French
+cuisine: Mediterranean
 time: 20 min
 servings: 4
 source: https://www.davidlebovitz.com/chocolate-mousse/

@@ -3,7 +3,7 @@ title: Pasta Aglio e Olio
 description: The pantry pasta. Four ingredients, twenty minutes, and it somehow tastes like you tried. The secret is patience with the garlic — golden, not brown — and enough pasta water to make the sauce silky rather than greasy.
 diet: [vegetarian]
 mealType: lunch-dinner
-cuisine: Italian
+cuisine: Mediterannian
 time: 20 min
 servings: 2
 source: https://www.bonappetit.com/recipe/pasta-aglio-e-olio
