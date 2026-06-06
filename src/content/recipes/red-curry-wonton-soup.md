@@ -1,5 +1,5 @@
 ---
-title: Red Curry Chicken Wonton Soup
+title: Red Curry Wonton Soup
 description: A quick, comforting Thai-style red curry broth with chicken wontons and Asian greens.
 image: ../../assets/recipes/red-curry-wonton-soup.jpg
 diet: []
