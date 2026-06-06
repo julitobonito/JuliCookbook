@@ -172,35 +172,36 @@ footer {
 .filter-group { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; }
 
 .filter-label {
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--text-soft);
-  margin-right: 0.2rem;
+  color: #1d2d1b;
+  margin-right: 0.4rem;
 }
 
 .filter-btn {
   padding: 0.3rem 0.75rem;
-  border: 1px solid var(--border);
-  background: transparent;
+  border: 1px solid #1d2d1b;
+  background: #1d2d1b;
   border-radius: 999px;
   font-size: 0.8rem;
   font-family: var(--font-body);
-  color: var(--text-mid);
+  color: #eaff4d;
   cursor: pointer;
   transition: background 0.12s, color 0.12s, border-color 0.12s;
 }
 
 .filter-btn:hover {
-  background: var(--border);
-  color: var(--text);
+  background: #2e4a2b;
+  border-color: #2e4a2b;
 }
 
 .filter-btn.active {
-  background: var(--text);
-  color: var(--bg);
-  border-color: var(--text);
+  background: #eaff4d;
+  color: #1d2d1b;
+  border-color: #b8cc3a;
 }
 
 .filter-divider {
