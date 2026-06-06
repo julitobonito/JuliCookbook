@@ -20,10 +20,12 @@ const { Content } = await recipe.render();
 <BaseLayout title={title} description={description}>
   <article class="recipe-page">
 
-    {image
-      ? <Image class="recipe-hero" src={image} alt={title} width={1200} />
-      : <div class="recipe-hero-placeholder">🍽️</div>
-    }
+    <div class="recipe-hero-wrap">
+      {image
+        ? <Image class="recipe-hero" src={image} alt={title} width={1200} />
+        : <div class="recipe-hero-placeholder">🍽️</div>
+      }
+    </div>
 
     <div class="recipe-eyebrow">
       <span>{cuisine}</span>
