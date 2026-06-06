@@ -16,31 +16,34 @@ const { diets, mealTypes, cuisines, times } = Astro.props;
     ))}
   </div>
 
-  <div class="filter-divider"></div>
-
-  <div class="filter-group">
-    <span class="filter-label">Meal</span>
-    {mealTypes.map(m => (
-      <button class="filter-btn" data-group="mealType" data-value={m}>{m}</button>
-    ))}
+  <div class="filter-section">
+    <div class="filter-divider"></div>
+    <div class="filter-group">
+      <span class="filter-label">Meal</span>
+      {mealTypes.map(m => (
+        <button class="filter-btn" data-group="mealType" data-value={m}>{m}</button>
+      ))}
+    </div>
   </div>
 
-  <div class="filter-divider"></div>
-
-  <div class="filter-group">
-    <span class="filter-label">Cuisine</span>
-    {cuisines.map(c => (
-      <button class="filter-btn" data-group="cuisine" data-value={c}>{c}</button>
-    ))}
+  <div class="filter-section">
+    <div class="filter-divider"></div>
+    <div class="filter-group">
+      <span class="filter-label">Cuisine</span>
+      {cuisines.map(c => (
+        <button class="filter-btn" data-group="cuisine" data-value={c}>{c}</button>
+      ))}
+    </div>
   </div>
 
-  <div class="filter-divider"></div>
-
-  <div class="filter-group">
-    <span class="filter-label">Time</span>
-    {times.map(t => (
-      <button class="filter-btn" data-group="time" data-value={t}>{t}</button>
-    ))}
+  <div class="filter-section">
+    <div class="filter-divider"></div>
+    <div class="filter-group">
+      <span class="filter-label">Time</span>
+      {times.map(t => (
+        <button class="filter-btn" data-group="time" data-value={t}>{t}</button>
+      ))}
+    </div>
   </div>
 </div>
 

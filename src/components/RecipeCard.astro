@@ -13,9 +13,9 @@ const href = `${base}recipes/${recipe.slug}`;
 
 function timeBucket(t: string): string {
   const mins = parseInt(t, 10);
-  if (mins < 30) return 'Under 30 min';
-  if (mins <= 60) return '30 min – 1 hour';
-  return 'Over 1 hour';
+  if (mins < 30) return '< 30 min';
+  if (mins <= 60) return '30 min - 1 hr';
+  return '> 1 hr';
 }
 
 // Cuisine placeholder colours for cards without photos

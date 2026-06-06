@@ -8,15 +8,15 @@ const recipes = await getCollection('recipes');
 
 function timeBucket(time: string): string {
   const mins = parseInt(time, 10);
-  if (mins < 30) return 'Under 30 min';
-  if (mins <= 60) return '30 min – 1 hour';
-  return 'Over 1 hour';
+  if (mins < 30) return '< 30 min';
+  if (mins <= 60) return '30 min - 1 hr';
+  return '> 1 hr';
 }
 
 const allDiets    = [...new Set(recipes.flatMap(r => r.data.diet))].sort();
 const allMeals    = [...new Set(recipes.map(r => r.data.mealType))].sort();
 const allCuisines = [...new Set(recipes.map(r => r.data.cuisine))].sort();
-const allTimes    = ['Under 30 min', '30 min – 1 hour', 'Over 1 hour'];
+const allTimes    = ['< 30 min', '30 min - 1 hr', '> 1 hr'];
 ---
 
 <BaseLayout title="Recipes" description="Browse all recipes in Juli's Cookbook.">
