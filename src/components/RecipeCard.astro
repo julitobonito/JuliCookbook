@@ -35,10 +35,12 @@ const emoji = placeholderEmoji[cuisine] ?? '🍽️';
   data-cuisine={cuisine}
   data-time={timeBucket(time)}
 >
-  {image
-    ? <Image class="card-image" src={image} alt={title} width={600} loading="lazy" />
-    : <div class="card-image-placeholder" style={`background:var(--border)`}>{emoji}</div>
-  }
+  <div class="card-image-wrap">
+    {image
+      ? <Image class="card-image" src={image} alt={title} width={600} loading="lazy" />
+      : <div class="card-image-placeholder">{emoji}</div>
+    }
+  </div>
   <div class="card-body">
     <div class="card-meta">
       <span>{cuisine}</span>
