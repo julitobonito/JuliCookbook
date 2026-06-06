@@ -1,6 +1,6 @@
 ---
 title: Dal Makhani
-description: Punjabi slow-cooked black lentils and kidney beans, simmered low and long with tomato, butter and cream until rich and silky. A great dish to cook in a bigger batch and eat over multiple days. If you are feeling fancy, prepare one of the other Indian dishes as well as it combines beautifully with most other dishes as well. Also, don't be scared by the long cooking time - most of the time is hands-off.
+description: A delicious slow-cooked black lentils and kidney beans dal, simmered low with tomato, butter and cream until rich and silky. A great dish to cook in a bigger batch and eat over multiple days. If you are feeling fancy, prepare one of the other Indian dishes as well as it combines beautifully with those. Also, don't be scared by the long cooking time - most of the time is hands-off.
 image: ../../assets/recipes/dal-makhani.jpg
 diet: [vegetarian]
 mealType: lunch-dinner
